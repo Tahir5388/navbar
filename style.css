@@ -1,0 +1,397 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: rgb(254, 252, 252);
+}
+.main{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.nav{
+    display: flex;
+    gap: 40px;
+align-items: center;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #070000;
+
+}
+
+.logo img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 60px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+/* Hover Effect */
+nav ul li a:hover {
+    color: #ff007f; /* Changes text color on hover */
+}
+/* Container for Dropdown */
+.nav-container {
+    position: relative;
+    background: black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Styling Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    position: relative;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: absolute;
+    top: 50%;
+    background-color: #2947cf;
+    left: 0;
+    padding: 10px;
+    display: none; /* Initially hidden */
+    min-width: 150px;
+}
+
+/* Show Dropdown when Hovering */
+.navbar li:hover .dropdown {
+    display: block; /* Visible only on hover */
+}
+
+/* Dropdown Items */
+.dropdown li {
+    list-style: none;
+    padding: 5px;
+    color: white;
+    font-size: 16px;
+}
+/* General Navbar Styling */
+.nav-container {
+    position: relative;
+    background: black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Navbar List */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Hide dropdowns by default */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: blue;
+    padding: 10px;
+    display: none;
+    min-width: 150px;
+}
+
+/* Show dropdown when hovering on desktop */
+@media screen and (min-width: 769px) {
+    .navbar li:hover .dropdown {
+        display: block;
+    }
+}
+
+/* ======= RESPONSIVE DESIGN ======= */
+
+/* Tablets & Smaller Screens */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .dropdown {
+        position: static;
+        display: none;
+        background: none;
+        padding: 5px;
+    }
+}
+
+/* MOBILE SCREENS */
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        text-align: left;
+        background: black;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 50px;
+        z-index: 100;
+        padding: 10px;
+    }
+
+    /* Show navbar when active */
+    .navbar.active {
+        display: flex;
+    }
+
+    /* Hamburger Menu Button */
+    .hamburger {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+        padding: 10px;
+    }
+
+    .navbar li {
+        width: 100%;
+        padding: 10px;
+        border-bottom: 1px solid white;
+    }
+
+    /* Hide dropdowns by default */
+    .dropdown {
+        display: none;
+        position: static;
+        background: none;
+        padding-left: 20px;
+    }
+
+    /* Show dropdowns when clicking */
+    .dropdown.active {
+        display: block;
+    }
+}
+
+/* Extra Small Screens */
+@media screen and (max-width: 480px) {
+    .nav-container {
+        padding: 5px;
+    }
+    .navbar {
+        align-items: flex-start;
+    }
+    .navbar li {
+        font-size: 16px;
+        padding: 8px;
+    }
+}
+
+nav ul li a::after {
+    position: absolute;
+    top: -50px;
+    right: -100px;
+    color: #ff007f;
+}
+.contact-btn {
+    background-color: rgb(230, 28, 28);
+    color: rgb(231, 214, 214);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    
+}
+.contact-btn:hover{
+    background-color: rgb(14, 125, 222);
+}
+
+.hero {
+    background: url('11.jpg') center/cover no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: bold;
+    max-width: 70%;
+    margin-left: 100px;
+}
+/* Schedule Link */
+.all{
+    display: flex;
+    align-items: center;
+}
+
+.schedule-link {
+    color: rgb(239, 233, 241);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+.schedule-link:hover {
+    color: #ff007f;
+}
+    .arrow-btn {
+        background: #9d174d;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+    }    
+.schedule-link:hover .arrow-icon {
+    background-color: #ff007f;
+}
+ /* Footer Styling */
+.footer {
+    background-color: hsl(070000);
+    color: white;
+    padding: 40px 150px;
+    display: flex;
+    justify-content: end;
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    width: 30%;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.phone {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fffdfd;
+}
+
+/* Newsletter */
+.newsletter {
+    display: flex;
+    background-color: #111;
+    border-radius: 5px;
+    padding: 8px;
+    margin-bottom: 20px;
+}
+
+.newsletter input {
+    border: none;
+    background: transparent;
+    color: white;
+    flex: 1;
+    padding: 8px;
+    outline: none;
+}
+
+.newsletter button {
+    background: none;
+    border: none;
+    color: #6495ed;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Quick Links */
+.quick-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links ul li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.social-icons div {
+    width: 40px;
+    height: 40px;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.social-icons div:hover {
+    background-color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

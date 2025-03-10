@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Insight</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="add.js"></script>
+</head>
+<body>
+    <header>
+        <div class="main">
+            <div class="logo"><img src="22.png" alt="The Software Insight"></div>
+    
+            <!-- Hamburger Menu -->
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            
+            <!-- Navbar -->
+            <nav class="navbar">
+                <ul class="menu">
+                    <li>
+                        <a href="#" onclick="toggleDropdown(event)">Services</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">Mobile App</a></li>
+                            <li><a href="#">UI/UX Design</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" onclick="toggleDropdown(event)">Technologies</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Fintech</a></li>
+                            <li><a href="#">HealthTech</a></li>
+                            <li><a href="#">EdTech</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" onclick="toggleDropdown(event)">Case Studies</a>
+                        <ul class="dropdown">
+                            <li><a href="#">E-commerce</a></li>
+                            <li><a href="#">Blockchain</a></li>
+                            <li><a href="#">Chatbots</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" onclick="toggleDropdown(event)">Company</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Amazon</a></li>
+                            <li><a href="#">Skype</a></li>
+                            <li><a href="#">Ebay</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Empowering SaaS and Midsize Businesses with Custom Software Excellence</h1>
+        </div>
+        </section>
+        <div class="all">
+                    <button class="contact-btn" onclick="changeText()">CONTACT US</button>
+                </div>
+                <script>
+                function changeText() {
+                    let button = document.querySelector('.contact-btn');
+                    button.textContent = "Clicked!";
+                }
+                </script>
+            </div>
+
+            <div>
+                    <a href="#" class="schedule-link">
+                    Schedule a 30-min Call with Our CEO
+                    <span class="arrow-icon">→</span>
+                    </a>
+                </div>
+                <div>
+            
+                        <footer class="footer">
+                            <div class="container">
+                                <!-- Where to Find Us -->
+                                <div class="footer-section">
+                                    <h3>Where To Find Us</h3>
+                                    <p><strong>17504 Carlton Cuevas Rd</strong><br> Gulfport, MS, 39503</p>
+                                    <p><strong>001123456789</strong><br> Mon-Fri 8:30am - 6:30pm</p>
+                                    <p><strong>Info@example.com</strong><br> 24x7 online support</p>
+                                </div>
+                    
+                                <!-- Newsletter & Quick Links -->
+                                <div class="footer-section">
+                                    <h3>Newsletter</h3>
+                                    <div class="newsletter">
+                                        <input type="email" placeholder="Enter Your Email">
+                                        <button><i class="fas fa-paper-plane"></i></button>
+                                    </div>
+                    
+                                    <h3>Quick Links</h3>
+                                     
+                                </div>
+                    
+                                <!-- Call Center -->
+                                <div class="footer-section">
+                                    <h3>Call Center</h3>
+                                    <p class="phone">1-800-555-500</p>
+                                    <p>and get a free estimate</p>
+                    
+                                    <!-- Social Media Icons -->
+                                    <div class="social-icons">
+                                        <div>FB</div>
+                                        <div>DR</div>
+                                        <div>TW</div>
+                                        <div>BE</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>                    
+                </div>
+            </html>
